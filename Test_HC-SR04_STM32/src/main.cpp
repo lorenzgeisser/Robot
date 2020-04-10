@@ -1,6 +1,5 @@
 #include <Arduino.h>
 #include <HCSR04.h>
-
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 
@@ -8,6 +7,7 @@ Adafruit_SSD1306 display(128, 32, &Wire, -1);
 
 HCSR04 ultrasonicSensor1(PB10, PB11, 20, 300);
 HCSR04 ultrasonicSensor2(PB13, PB12, 20, 300);
+
 float distance1 = 0;
 float distance2 = 0;
 
@@ -15,7 +15,6 @@ void setup()
 {
 
     ultrasonicSensor1.begin();
-    
     ultrasonicSensor2.begin();
 
     display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
