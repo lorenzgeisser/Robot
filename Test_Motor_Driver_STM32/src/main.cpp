@@ -12,8 +12,9 @@ void setup()
 {
     pinMode(MOTOR_PIN_RIGHT, OUTPUT);
     pinMode(MOTOR_PIN_LEFT, OUTPUT);
-    
-    analogWrite(MOTOR_PIN_RIGHT, map(10, 0, 100, 0, 0xFF));
+
+    digitalWrite(MOTOR_PIN_RIGHT, HIGH);
+    digitalWrite(MOTOR_PIN_LEFT, HIGH);
 
     display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
     display.clearDisplay();
